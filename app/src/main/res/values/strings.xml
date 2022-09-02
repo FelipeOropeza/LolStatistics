@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">LoLStatistics</string>
+    <string name="txtTitulo">LoLStatistics</string>
+    <string name="txtAatrox">Aatrox</string>
+    <string name="txtAhri">Ahri</string>
+    <string name="txtAkali">Akali</string>
+    <string name="txtAkshan">Akshan</string>
+    <string name="txtAlistar">Alistar</string>
+    <string name="txtAmumu">Amumu</string>
+    <string name="txtAnivia">Anivia</string>
+    <string name="txtAnnie">Annie</string>
+    <string name="txtAphelios">Aphelios</string>
+    <string name="txtAshe">Ashe</string>
+</resources>
