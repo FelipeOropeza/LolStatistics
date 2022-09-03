@@ -55,7 +55,7 @@
             android:layout_weight="1"
             android:width="50dp"
             android:paddingHorizontal="10dp"
-            android:text="Button" />
+            android:text="@string/txtAatrox" />
 
         <Button
             android:id="@+id/btnAhri"
