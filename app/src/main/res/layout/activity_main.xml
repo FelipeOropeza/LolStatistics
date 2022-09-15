@@ -4,100 +4,87 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000"
+    android:background="#1E1C1C"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="135dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="136dp"
-        android:layout_marginBottom="7dp"
-        android:text="@string/txtTitulo"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/idLayoutLinear"
+    <Button
+        android:id="@+id/btnAlistar"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="640dp"
+        android:layout_weight="1"
+        android:paddingHorizontal="10dp"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnAkshan"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnAkshan"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="640dp"
+        android:layout_weight="1"
+        android:width="50dp"
+        android:paddingHorizontal="10dp"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnAlistar"
+        app:layout_constraintStart_toEndOf="@+id/btnAkali"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnAkali"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="640dp"
+        android:layout_weight="1"
+        android:width="50dp"
+        android:paddingHorizontal="10dp"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnAkshan"
+        app:layout_constraintStart_toEndOf="@+id/btnAhri"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnAatrox"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="640dp"
+        android:layout_weight="1"
+        android:width="50dp"
+        android:paddingHorizontal="10dp"
+        android:text="@string/txtAatrox"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnAhri"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
-        android:id="@+id/idLayoutLinear"
-        android:layout_width="412dp"
-        android:layout_height="689dp"
-        android:background="#1B1616"
-        android:gravity="left"
-        android:orientation="horizontal"
-        android:padding="10dp"
+    <Button
+        android:id="@+id/btnAhri"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="640dp"
+        android:layout_weight="1"
+        android:width="50dp"
         android:paddingHorizontal="10dp"
-        android:paddingVertical="10dp"
-        android:paddingStart="10dp"
-        android:paddingLeft="10dp"
-        android:paddingTop="10dp"
-        android:paddingEnd="10dp"
-        android:paddingRight="10dp"
-        android:paddingBottom="10dp"
+        android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.476"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        app:layout_wrapBehaviorInParent="skipped">
+        app:layout_constraintEnd_toStartOf="@+id/btnAkali"
+        app:layout_constraintStart_toEndOf="@+id/btnAatrox"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
-            android:id="@+id/btnAatrox"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:width="50dp"
-            android:paddingHorizontal="10dp"
-            android:text="@string/txtAatrox" />
-
-        <Button
-            android:id="@+id/btnAhri"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:width="50dp"
-            android:paddingHorizontal="10dp"
-            android:text="Button" />
-
-        <Button
-            android:id="@+id/btnAkali"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:width="50dp"
-            android:paddingHorizontal="10dp"
-            android:text="Button" />
-
-        <Button
-            android:id="@+id/btnAkshan"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:width="50dp"
-            android:paddingHorizontal="10dp"
-            android:text="Button" />
-
-        <Button
-            android:id="@+id/btnAlistar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:paddingHorizontal="10dp"
-            android:text="Button" />
-
-        <Button
-            android:id="@+id/button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Button" />
-
-    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
