@@ -7,84 +7,31 @@
     android:background="#1E1C1C"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/btnAlistar"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="31dp"
-        android:layout_marginEnd="28dp"
-        android:layout_marginBottom="640dp"
-        android:layout_weight="1"
-        android:paddingHorizontal="10dp"
-        android:text="Button"
+    <TextView
+        android:id="@+id/aatrox3"
+        android:layout_width="106dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginEnd="296dp"
+        android:layout_marginBottom="596dp"
+        android:text="@string/txtAatrox"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnAkshan"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/Aatrox"
+        app:layout_constraintVertical_bias="1.0" />
 
-    <Button
-        android:id="@+id/btnAkshan"
+    <ImageButton
+        android:id="@+id/imageButton"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_marginTop="31dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="640dp"
-        android:layout_weight="1"
-        android:width="50dp"
-        android:paddingHorizontal="10dp"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnAlistar"
-        app:layout_constraintStart_toEndOf="@+id/btnAkali"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/btnAkali"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="31dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="640dp"
-        android:layout_weight="1"
-        android:width="50dp"
-        android:paddingHorizontal="10dp"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnAkshan"
-        app:layout_constraintStart_toEndOf="@+id/btnAhri"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/btnAatrox"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="27dp"
-        android:layout_marginTop="31dp"
-        android:layout_marginEnd="14dp"
-        android:layout_marginBottom="640dp"
-        android:layout_weight="1"
-        android:width="50dp"
-        android:paddingHorizontal="10dp"
-        android:text="@string/txtAatrox"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnAhri"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/btnAhri"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="31dp"
-        android:layout_marginEnd="14dp"
-        android:layout_marginBottom="640dp"
-        android:layout_weight="1"
-        android:width="50dp"
-        android:paddingHorizontal="10dp"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnAkali"
-        app:layout_constraintStart_toEndOf="@+id/btnAatrox"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:background="#00FFFFFF"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/aatrox"
+        tools:layout_editor_absoluteX="31dp"
+        tools:layout_editor_absoluteY="37dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

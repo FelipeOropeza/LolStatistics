@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">LoLStatistics</string>
     <string name="txtTitulo">LoLStatistics</string>
+    <string name="txtRota">Rotas:</string>
+    <string name="txtBuildsRecomendadas">Builds Recomendadas</string>
     <string name="txtAatrox">Aatrox</string>
     <string name="txtDescAatrox">A espada Darkin</string>
     <string name="txtAhri">Ahri</string>
