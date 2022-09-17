@@ -12,9 +12,9 @@
         android:layout_width="36dp"
         android:layout_height="36dp"
         android:layout_marginStart="6dp"
-        android:layout_marginTop="13dp"
+        android:layout_marginTop="18dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="339dp"
+        android:layout_marginBottom="464dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView12"
@@ -83,10 +83,10 @@
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.914"
+        app:layout_constraintHorizontal_bias="0.691"
         app:layout_constraintStart_toEndOf="@+id/imageView3"
         app:layout_constraintTop_toBottomOf="@+id/Aatrox"
-        app:layout_constraintVertical_bias="0.116" />
+        app:layout_constraintVertical_bias="0.106" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -132,10 +132,9 @@
         android:id="@+id/imageView4"
         android:layout_width="55dp"
         android:layout_height="55dp"
-        android:layout_marginStart="3dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="8dp"
         android:layout_marginEnd="212dp"
-        android:layout_marginBottom="388dp"
+        android:layout_marginBottom="390dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView"
@@ -146,10 +145,10 @@
         android:id="@+id/imageView5"
         android:layout_width="55dp"
         android:layout_height="55dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="143dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="99dp"
         android:layout_marginEnd="9dp"
-        android:layout_marginBottom="388dp"
+        android:layout_marginBottom="398dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/imageView6"
         app:layout_constraintStart_toEndOf="@+id/imageView4"
@@ -160,19 +159,22 @@
         android:id="@+id/imageView6"
         android:layout_width="55dp"
         android:layout_height="55dp"
-        android:layout_marginTop="102dp"
+        android:layout_marginTop="123dp"
         android:layout_marginEnd="11dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView11"
         app:layout_constraintEnd_toStartOf="@+id/imageView7"
         app:layout_constraintStart_toEndOf="@+id/imageView5"
         app:layout_constraintTop_toBottomOf="@+id/aatrox4"
-        app:srcCompat="@drawable/rancordeserylda" />
+        app:srcCompat="@drawable/rancordeserylda"
+        tools:ignore="ImageContrastCheck,ImageContrastCheck" />
 
     <ImageView
         android:id="@+id/imageView7"
         android:layout_width="55dp"
         android:layout_height="55dp"
-        android:layout_marginTop="58dp"
+        android:layout_marginTop="105dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginBottom="22dp"
         app:layout_constraintBottom_toTopOf="@+id/imageView13"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView6"
@@ -208,9 +210,15 @@
         android:id="@+id/imageView14"
         android:layout_width="36dp"
         android:layout_height="36dp"
-        app:srcCompat="@drawable/top"
-        tools:layout_editor_absoluteX="336dp"
-        tools:layout_editor_absoluteY="194dp" />
+        android:layout_marginStart="306dp"
+        android:layout_marginTop="350dp"
+        android:layout_marginEnd="39dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/top" />
 
     <ImageView
         android:id="@+id/imageView12"
@@ -238,5 +246,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2"
         app:srcCompat="@drawable/flash" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="imageView6" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

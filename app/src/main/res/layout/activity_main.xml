@@ -7,31 +7,160 @@
     android:background="#1E1C1C"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/aatrox3"
-        android:layout_width="106dp"
-        android:layout_height="38dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginEnd="296dp"
-        android:layout_marginBottom="596dp"
-        android:text="@string/txtAatrox"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <ImageButton
+        android:id="@+id/ib_aatrox"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="320dp"
+        android:background="#00FFFFFF"
+        android:onClick="AbrirGuiaAatrox"
+        android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView3"
-        app:layout_constraintTop_toBottomOf="@+id/Aatrox"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/aatrox"
+        tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/ib_ahri"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="176dp"
+        android:layout_marginBottom="9dp"
+        android:background="#00FFFFFF"
+        android:onClick="AbrirGuiaAhri"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/ahriTi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/ib_aatrox"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ahri"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/ib_akali"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="51dp"
+        android:layout_marginBottom="634dp"
+        android:background="#00FFFFFF"
+        android:onClick="AbrirGuiaAkali"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ib_ahri"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/akali"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/ib_akshan"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:background="#00FFFFFF"
+        android:onClick="AbrirGuiaAkshan"
         android:scaleType="fitXY"
-        app:srcCompat="@drawable/aatrox"
+        app:srcCompat="@drawable/akshan"
+        tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck"
         tools:layout_editor_absoluteX="31dp"
-        tools:layout_editor_absoluteY="37dp" />
+        tools:layout_editor_absoluteY="190dp" />
+
+    <ImageButton
+        android:id="@+id/ib_alistar"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="85dp"
+        android:layout_marginTop="190dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="15dp"
+        android:background="#00FFFFFF"
+        android:onClick="AbrirGuiaAlistar"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/textView5"
+        app:layout_constraintEnd_toStartOf="@+id/ib_akali"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/ib_akshan"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/alistar"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/ahriTi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="111dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="200dp"
+        android:layout_marginBottom="604dp"
+        android:text="@string/txtAhri"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/aatroxTi"
+        app:layout_constraintTop_toBottomOf="@+id/ib_ahri" />
+
+    <TextView
+        android:id="@+id/aatroxTi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txtAatrox"
+        android:textColor="#FFFFFF"
+        tools:layout_editor_absoluteX="34dp"
+        tools:layout_editor_absoluteY="106dp" />
+
+    <TextView
+        android:id="@+id/akaliTi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="86dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginBottom="598dp"
+        android:text="@string/txtAkali"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ahriTi"
+        app:layout_constraintTop_toBottomOf="@+id/ib_akali" />
+
+    <TextView
+        android:id="@+id/akshanTi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="319dp"
+        android:layout_marginBottom="454dp"
+        android:text="@string/txtAkshan"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ib_akshan" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="174dp"
+        android:layout_marginBottom="447dp"
+        android:text="@string/txtAlistar"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/akshanTi"
+        app:layout_constraintTop_toBottomOf="@+id/ib_alistar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
