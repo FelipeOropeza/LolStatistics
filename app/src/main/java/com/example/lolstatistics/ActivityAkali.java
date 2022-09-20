@@ -9,6 +9,7 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 public class ActivityAkali extends AppCompatActivity {
@@ -25,18 +26,18 @@ public class ActivityAkali extends AppCompatActivity {
         proximitySensor = sensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY);
 
         if (proximitySensor == null) {
-            Toast.makeText(this, "Proxi", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Sensor de Proximidade", Toast.LENGTH_LONG).show();
             finish();
         }
 
         proximitySensorListner = new SensorEventListener() {
             @Override
             public void onSensorChanged(SensorEvent sensorEvent) {
-                if(sensorEvent.values[0] == 0){
+                if(sensorEvent.values[0] < proximitySensor.getMaximumRange()){
                     getWindow().getDecorView().setBackgroundColor(Color.GREEN);
 
                 }else{
-                    getWindow().getDecorView().setBackgroundColor(Color.GRAY);
+                    getWindow().getDecorView().setBackgroundColor(Color.BLUE);
                 }
             }
 
@@ -54,5 +55,9 @@ public class ActivityAkali extends AppCompatActivity {
 
         sensorManager.unregisterListener(proximitySensorListner);
 
+    }
+    public void VoltaGuia(View view){
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 }
