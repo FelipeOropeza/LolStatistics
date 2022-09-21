@@ -2,6 +2,9 @@ package com.example.lolstatistics;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
+import android.content.AsyncQueryHandler;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.hardware.Sensor;
@@ -26,18 +29,17 @@ public class ActivityAkali extends AppCompatActivity {
         proximitySensor = sensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY);
 
         if (proximitySensor == null) {
-            Toast.makeText(this, "Sensor de Proximidade", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Sensor de Proximidade não está disponível", Toast.LENGTH_LONG).show();
             finish();
         }
 
         proximitySensorListner = new SensorEventListener() {
             @Override
             public void onSensorChanged(SensorEvent sensorEvent) {
-                if(sensorEvent.values[0] < proximitySensor.getMaximumRange()){
-                    getWindow().getDecorView().setBackgroundColor(Color.GREEN);
-
-                }else{
+                if (sensorEvent.values[0] < proximitySensor.getMaximumRange()) {
                     getWindow().getDecorView().setBackgroundColor(Color.BLUE);
+                } else {
+                    getWindow().getDecorView().setBackgroundColor(Color.BLACK);
                 }
             }
 
@@ -48,14 +50,9 @@ public class ActivityAkali extends AppCompatActivity {
         };
 
         sensorManager.registerListener(proximitySensorListner, proximitySensor, SensorManager.SENSOR_DELAY_NORMAL);
-    }
-    @Override
-    protected void onPause() {
-        super.onPause();
-
-        sensorManager.unregisterListener(proximitySensorListner);
 
     }
+
     public void VoltaGuia(View view){
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
