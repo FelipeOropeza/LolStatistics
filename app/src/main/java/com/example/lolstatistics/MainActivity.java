@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         giroscopio.setListener(new Giroscopio.Listener() {
             @Override
             public void onRotation(float rx, float ry, float rz) {
-                if(rz > 1.0f){
+                if(rz > 7.0f){
                     getWindow().getDecorView().setBackgroundColor(Color.BLUE);
                 }
             }
