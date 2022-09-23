@@ -5,6 +5,7 @@ import androidx.core.app.ActivityCompat;
 
 import android.Manifest;
 import android.content.Context;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.hardware.Sensor;
 import android.hardware.SensorEventListener;
@@ -12,6 +13,7 @@ import android.hardware.SensorManager;
 import android.location.GnssAntennaInfo;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.content.Intent;
 
@@ -31,7 +33,11 @@ public class MainActivity extends AppCompatActivity {
                 if(rz > 4.0f){
                     Uri location = Uri.parse("geo:34.03263537836872, -118.45748108658526");
                     Intent mapIntent = new Intent(Intent.ACTION_VIEW, location);
-                    startActivity(mapIntent );
+                    if(ActivityCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                        ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.ACCESS_COARSE_LOCATION}, 1);
+                    } else{
+                        startActivity(mapIntent);
+                    }
                 }
             }
         });
@@ -68,11 +74,5 @@ public class MainActivity extends AppCompatActivity {
     public void AbrirGuiaAlistar(View view){
         Intent intent = new Intent(this, ActivityAlistar.class);
         startActivity(intent);
-    }
-    if(ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)!= PackageManager.PERMISSION_GRANTED)) {
-        AcivityCompat.requestPermissions(this, new string[]{Manifest.premission.ACESS_FINE_LOCATION}, REQUEST_LOCATION_PERMISSION);
-    } else{
-
-    }
     }
 }
