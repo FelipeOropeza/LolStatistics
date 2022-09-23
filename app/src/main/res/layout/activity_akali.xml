@@ -65,7 +65,6 @@
         android:layout_height="55dp"
         android:baselineAlignBottom="true"
         android:foregroundTint="#005F2E8F"
-        android:tint="#009F3131"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.957"
