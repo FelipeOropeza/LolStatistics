@@ -4,255 +4,242 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#00FFFFFF"
-    android:backgroundTint="#00FFFFFF"
     tools:context=".MainActivity">
 
-    <View
-        android:id="@+id/divider"
-        android:layout_width="409dp"
-        android:layout_height="1dp"
-        android:background="?android:attr/listDivider"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.94" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <ImageButton
-        android:id="@+id/ib_alistar"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:background="#00FFFFFF"
-        android:onClick="AbrirGuiaAlistar"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.954"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.113"
-        app:srcCompat="@drawable/alistar"
-        tools:ignore="SpeakableTextPresentCheck" />
+        <TextView
+            android:id="@+id/txtAhri"
+            android:layout_width="48dp"
+            android:layout_height="20dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/txtAhri"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF" />
 
-    <TextView
-        android:id="@+id/alistarTi"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/txtAlistar"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.924"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.195" />
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="47dp"
+            android:layout_height="48dp"
+            android:text="Button" />
 
-    <ImageButton
-        android:id="@+id/ib_akali"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:background="#00FFFFFF"
-        android:onClick="AbrirGuiaAkali"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.113"
-        app:srcCompat="@drawable/akali"
-        tools:ignore="SpeakableTextPresentCheck" />
+        <TextView
+            android:id="@+id/txtAnnie"
+            android:layout_width="48dp"
+            android:layout_height="20dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/txtAnnie"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF" />
 
-    <ImageButton
-        android:id="@+id/ib_aatrox"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:background="#00FFFFFF"
-        android:onClick="AbrirGuiaAatrox"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.054"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.113"
-        app:srcCompat="@drawable/aatrox"
-        tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
+        <Button
+            android:id="@+id/btnAphelios"
+            android:layout_width="47dp"
+            android:layout_height="48dp"
+            android:text="Button" />
 
-    <TextView
-        android:id="@+id/ahriTi"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/txtAhri"
-        android:textColor="#FFFFFF"
-        android:textColorHint="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.29"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.195" />
+        <TextView
+            android:id="@+id/txtAmumu"
+            android:layout_width="58dp"
+            android:layout_height="19dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/txtAmumu"
+            android:textColor="#FFFFFF" />
 
-    <ImageButton
-        android:id="@+id/ib_akshan"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:background="#00FFFFFF"
-        android:onClick="AbrirGuiaAkshan"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.729"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.113"
-        app:srcCompat="@drawable/akshan"
-        tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck,DuplicateSpeakableTextCheck" />
+        <TextView
+            android:id="@+id/txtAnivia"
+            android:layout_width="48dp"
+            android:layout_height="20dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/txtAnivia"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF" />
 
-    <ImageButton
-        android:id="@+id/ib_ahri"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:background="#00FFFFFF"
-        android:onClick="AbrirGuiaAhri"
-        android:scaleType="centerCrop"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.276"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.113"
-        app:srcCompat="@drawable/ahri"
-        tools:ignore="SpeakableTextPresentCheck" />
+        <Button
+            android:id="@+id/btnAhri"
+            android:layout_width="47dp"
+            android:layout_height="48dp"
+            android:text="Button" />
 
-    <TextView
-        android:id="@+id/aatroxTi"
-        android:layout_width="53dp"
-        android:layout_height="25dp"
-        android:text="@string/txtAatrox"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.053"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.194" />
+        <TextView
+            android:id="@+id/txtAlistar"
+            android:layout_width="48dp"
+            android:layout_height="20dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/txtAlistar"
+            android:textColor="#FFFFFF" />
 
-    <TextView
-        android:id="@+id/akaliTi"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/txtAkali"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.195" />
+        <TextView
+            android:id="@+id/txtAphelios"
+            android:layout_width="67dp"
+            android:layout_height="23dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/txtAphelios"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF" />
 
-    <TextView
-        android:id="@+id/akshanTi"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/txtAkshan"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.72"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.195" />
+        <Button
+            android:id="@+id/btnAkali"
+            android:layout_width="47dp"
+            android:layout_height="48dp"
+            android:text="Button" />
 
-    <TextView
-        android:id="@+id/titulo"
-        android:layout_width="235dp"
-        android:layout_height="35dp"
-        android:text="@string/txtTitulo"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.46"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.022" />
+        <Button
+            android:id="@+id/btnAatrox"
+            android:layout_width="47dp"
+            android:layout_height="48dp"
+            android:hapticFeedbackEnabled="false"
+            android:text="Button" />
 
-    <TextView
-        android:id="@+id/txtLongitude"
-        android:layout_width="117dp"
-        android:layout_height="34dp"
-        android:text="@string/txtTitulo"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.751"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.695" />
+        <TextView
+            android:id="@+id/txtAshe"
+            android:layout_width="48dp"
+            android:layout_height="20dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/txtAshe"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF" />
 
-    <TextView
-        android:id="@+id/txtLatitude"
-        android:layout_width="117dp"
-        android:layout_height="34dp"
-        android:text="@string/txtTitulo"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.244"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.695" />
+        <Button
+            android:id="@+id/btnAshe"
+            android:layout_width="47dp"
+            android:layout_height="48dp"
+            android:text="Button" />
 
-    <View
-        android:id="@+id/divider2"
-        android:layout_width="409dp"
-        android:layout_height="1dp"
-        android:background="?android:attr/listDivider"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.075" />
+        <TextView
+            android:id="@+id/txtAkali"
+            android:layout_width="48dp"
+            android:layout_height="20dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/txtAkali"
+            android:textColor="#FFFFFF" />
 
-    <Button
-        android:id="@+id/btn_abriSite"
-        android:layout_width="209dp"
-        android:layout_height="48dp"
-        android:background="#00FFFFFF"
-        android:backgroundTint="#8E8181"
-        android:onClick="AbrirSite"
-        android:text="@string/txtSite"
-        android:textColor="#FFFFFF"
-        android:textColorHint="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.097"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        <Button
+            android:id="@+id/btnAnivia"
+            android:layout_width="47dp"
+            android:layout_height="48dp"
+            android:text="Button" />
 
-    <Button
-        android:id="@+id/btn_abriYou"
-        android:layout_width="197dp"
-        android:layout_height="47dp"
-        android:background="#00FFFFFF"
-        android:backgroundTint="#8E8181"
-        android:onClick="AbrirYouTube"
-        android:text="@string/txtCanal"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.918"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        tools:ignore="TouchTargetSizeCheck" />
+        <Button
+            android:id="@+id/btnAhri"
+            android:layout_width="47dp"
+            android:layout_height="48dp"
+            android:text="Button" />
+
+        <TextView
+            android:id="@+id/txtAkshan"
+            android:layout_width="48dp"
+            android:layout_height="20dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/txtAkshan"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="47dp"
+            android:layout_height="48dp"
+            android:text="Button" />
+
+        <Button
+            android:id="@+id/btnAkali"
+            android:layout_width="47dp"
+            android:layout_height="48dp"
+            android:text="Button" />
+
+        <Button
+            android:id="@+id/btnAnnie"
+            android:layout_width="47dp"
+            android:layout_height="48dp"
+            android:text="Button" />
+
+        <Button
+            android:id="@+id/btnAphelios"
+            android:layout_width="47dp"
+            android:layout_height="48dp"
+            android:text="Button" />
+
+        <Button
+            android:id="@+id/btnAnnie"
+            android:layout_width="47dp"
+            android:layout_height="48dp"
+            android:text="Button" />
+
+        <Button
+            android:id="@+id/btnAatrox"
+            android:layout_width="47dp"
+            android:layout_height="48dp"
+            android:text="Button" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="127dp"
+            android:layout_height="31dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/txtTitulo"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/txtAatrox"
+            android:layout_width="48dp"
+            android:layout_height="20dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/txtAatrox"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btnAmumu"
+            android:layout_width="47dp"
+            android:layout_height="48dp"
+            android:text="Button" />
+
+        <Button
+            android:id="@+id/btnAkshan"
+            android:layout_width="47dp"
+            android:layout_height="48dp"
+            android:text="Button" />
+
+        <Button
+            android:id="@+id/btnAnivia"
+            android:layout_width="47dp"
+            android:layout_height="48dp"
+            android:text="Button" />
+
+        <Button
+            android:id="@+id/btnAmumu"
+            android:layout_width="47dp"
+            android:layout_height="48dp"
+            android:text="Button" />
+
+        <Button
+            android:id="@+id/btnAkshan"
+            android:layout_width="47dp"
+            android:layout_height="48dp"
+            android:text="Button" />
+
+        <Button
+            android:id="@+id/btnAshe"
+            android:layout_width="47dp"
+            android:layout_height="48dp"
+            android:text="Button" />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#2C2929"
+        android:backgroundTint="#1E1C1C"
+        tools:context=".MainActivity"
+        tools:layout_editor_absoluteX="-124dp"
+        tools:layout_editor_absoluteY="0dp">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
