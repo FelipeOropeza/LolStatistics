@@ -48,24 +48,6 @@ public class MainActivity extends AppCompatActivity {
         txtLatitude = (TextView) findViewById(R.id.txtLatitude);
         txtLongitude = (TextView) findViewById(R.id.txtLongitude);
 
-        double longitude = 0;
-        double latitude = 0;
-
-        if(ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-
-        }else{
-            locationManager = (LocationManager)
-            getSystemService(Context.LOCATION_SERVICE);
-            location =
-                    locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
-        }
-        if (location != null){
-            longitude = location.getLongitude();
-            latitude = location.getLatitude();
-        }
-        txtLatitude.setText("Logitude: " + longitude);
-        txtLatitude.setText("Latitude: " + latitude);
-
         giroscopio = new Giroscopio(this);
         giroscopio.setListener(new Giroscopio.Listener() {
             @Override
@@ -134,22 +116,24 @@ public class MainActivity extends AppCompatActivity {
         startActivity(it);
     }
     public void mostrarLocal(View view){
-        if(ActivityCompat.checkSelfPermission(
-                this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
-                &&
-                ActivityCompat.checkSelfPermission(
-                        this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED
-        ){
-            ActivityCompat.requestPermissions(this, new String[] {Manifest.permission.ACCESS_FINE_LOCATION}, 1);
-            ActivityCompat.requestPermissions(this, new String[] {Manifest.permission.ACCESS_COARSE_LOCATION}, 1);
-            ActivityCompat.requestPermissions(this, new String[] {Manifest.permission.ACCESS_NETWORK_STATE}, 1);
 
+        double longitude = 0;
+        double latitude = 0;
+
+        if(ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.ACCESS_COARSE_LOCATION}, 1);
+        }else{
+            locationManager = (LocationManager)
+                    getSystemService(Context.LOCATION_SERVICE);
+            location =
+                    locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
         }
-
-        LocationManager locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
-        LocationListener locationListener = new Localizacao();
-        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, locationListener);
-        Log.v("geo", String.valueOf(Localizacao.latitude));
+        if (location != null){
+            longitude = location.getLongitude();
+            latitude = location.getLatitude();
+        }
+        txtLatitude.setText("Logitude: " + String.valueOf(latitude));
+        txtLongitude.setText("Latitude: " + String.valueOf(longitude));
     }
     public void mostrarMapa(View view){
         double latitude = -23.322484, longitude = -46.732528;
