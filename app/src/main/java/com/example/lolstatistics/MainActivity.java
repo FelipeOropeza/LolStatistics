@@ -137,7 +137,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-    public void mostrarMapa(View view){
+    public void mostrarmapa(View view){
         double latitude = -23.322484, longitude = -46.732528;
         Uri location = Uri.parse("geo:" + String.valueOf(latitude) + "," + String.valueOf(longitude));
         Intent mapIntent = new Intent(Intent.ACTION_VIEW, location);
