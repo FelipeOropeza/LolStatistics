@@ -180,36 +180,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.022" />
 
-    <TextView
-        android:id="@+id/txtLongitude"
-        android:layout_width="117dp"
-        android:layout_height="34dp"
-        android:text="@string/txtTitulo"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.751"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.695" />
-
-    <TextView
-        android:id="@+id/txtLatitude"
-        android:layout_width="117dp"
-        android:layout_height="34dp"
-        android:text="@string/txtTitulo"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.244"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.695" />
-
     <View
         android:id="@+id/divider2"
         android:layout_width="409dp"
@@ -223,33 +193,52 @@
 
     <Button
         android:id="@+id/btn_abriSite"
-        android:layout_width="209dp"
-        android:layout_height="48dp"
+        android:layout_width="128dp"
+        android:layout_height="47dp"
         android:background="#00FFFFFF"
         android:backgroundTint="#8E8181"
         android:onClick="AbrirSite"
         android:text="@string/txtSite"
         android:textColor="#FFFFFF"
         android:textColorHint="#000000"
+        android:textSize="10sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.097"
+        app:layout_constraintHorizontal_bias="0.102"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/btn_abriYou"
-        android:layout_width="197dp"
+        android:layout_width="131dp"
         android:layout_height="47dp"
         android:background="#00FFFFFF"
         android:backgroundTint="#8E8181"
         android:onClick="AbrirYouTube"
         android:text="@string/txtCanal"
         android:textColor="#FFFFFF"
+        android:textSize="10sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.918"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/btn_abriYou2"
+        android:layout_width="130dp"
+        android:layout_height="44dp"
+        android:background="#00FFFFFF"
+        android:backgroundTint="#8E8181"
+        android:onClick="mostrarMapa"
+        android:text="Mapa"
+        android:textColor="#FFFFFF"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"

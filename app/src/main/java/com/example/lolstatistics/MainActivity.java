@@ -13,25 +13,34 @@ import android.hardware.Sensor;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.location.GnssAntennaInfo;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.content.Intent;
+import android.widget.TextView;
+
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
+import java.text.BreakIterator;
 
 
 public class MainActivity extends AppCompatActivity {
 
     private Giroscopio giroscopio;
+    private Location location;
+    private LocationManager locationManager;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        
         giroscopio = new Giroscopio(this);
-
         giroscopio.setListener(new Giroscopio.Listener() {
             @Override
             public void onRotation(float rx, float ry, float rz) {
@@ -48,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-
+    
     @Override
     protected void onResume() {
         super.onResume();
@@ -60,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
         super.onPause();
         giroscopio.desRegistro();
     }
-
+    
 
     public void AbrirGuiaAatrox(View view) {
         Intent intent = new Intent(this, ActivityAatrox.class);
@@ -97,5 +106,29 @@ public class MainActivity extends AppCompatActivity {
         Uri uri = Uri.parse("https://www.youtube.com/c/RiotGamesBrasil");
         Intent it = new Intent(Intent.ACTION_VIEW, uri);
         startActivity(it);
+    }
+    public void mostrarLocal(View view){
+        if(ActivityCompat.checkSelfPermission(
+                this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
+                &&
+                ActivityCompat.checkSelfPermission(
+                        this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED
+        ){
+            ActivityCompat.requestPermissions(this, new String[] {Manifest.permission.ACCESS_FINE_LOCATION}, 1);
+            ActivityCompat.requestPermissions(this, new String[] {Manifest.permission.ACCESS_COARSE_LOCATION}, 1);
+            ActivityCompat.requestPermissions(this, new String[] {Manifest.permission.ACCESS_NETWORK_STATE}, 1);
+
+        }
+
+        LocationManager locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
+        LocationListener locationListener = new Localizacao();
+        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, locationListener);
+        Log.v("geo", String.valueOf(Localizacao.latitude));
+    }
+    public void mostrarMapa(View view){
+        double latitude = -23.322484, longitude = -46.732528;
+        Uri location = Uri.parse("geo:" + String.valueOf(latitude) + "," + String.valueOf(longitude));
+        Intent mapIntent = new Intent(Intent.ACTION_VIEW, location);
+        startActivity(mapIntent);
     }
 }
