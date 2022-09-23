@@ -6,12 +6,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.hardware.Sensor;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
+import android.location.Address;
 import android.location.GnssAntennaInfo;
 import android.location.Location;
 import android.location.LocationListener;
@@ -30,16 +32,40 @@ import java.text.BreakIterator;
 
 public class MainActivity extends AppCompatActivity {
 
+    private TextView txtLatitude;
+    private TextView txtLongitude;
     private Giroscopio giroscopio;
     private Location location;
     private LocationManager locationManager;
 
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        
+
+        txtLatitude = (TextView) findViewById(R.id.txtLatitude);
+        txtLongitude = (TextView) findViewById(R.id.txtLongitude);
+
+        double longitude = 0;
+        double latitude = 0;
+
+        if(ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+
+        }else{
+            locationManager = (LocationManager)
+            getSystemService(Context.LOCATION_SERVICE);
+            location =
+                    locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+        }
+        if (location != null){
+            longitude = location.getLongitude();
+            latitude = location.getLatitude();
+        }
+        txtLatitude.setText("Logitude: " + longitude);
+        txtLatitude.setText("Latitude: " + latitude);
+
         giroscopio = new Giroscopio(this);
         giroscopio.setListener(new Giroscopio.Listener() {
             @Override
@@ -57,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-    
+
     @Override
     protected void onResume() {
         super.onResume();
@@ -69,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
         super.onPause();
         giroscopio.desRegistro();
     }
-    
+
 
     public void AbrirGuiaAatrox(View view) {
         Intent intent = new Intent(this, ActivityAatrox.class);
@@ -131,4 +157,6 @@ public class MainActivity extends AppCompatActivity {
         Intent mapIntent = new Intent(Intent.ACTION_VIEW, location);
         startActivity(mapIntent);
     }
+
+
 }
