@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
         txtLatitude = (TextView) findViewById(R.id.txtLatitude);
         txtLongitude = (TextView) findViewById(R.id.txtLongitude);
 
+
         giroscopio = new Giroscopio(this);
         giroscopio.setListener(new Giroscopio.Listener() {
             @Override
@@ -116,12 +117,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(it);
     }
     public void mostrarLocal(View view){
-
         double longitude = 0;
         double latitude = 0;
 
-        if(ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.ACCESS_COARSE_LOCATION}, 1);
+        if(ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 1);
         }else{
             locationManager = (LocationManager)
                     getSystemService(Context.LOCATION_SERVICE);
@@ -132,8 +132,10 @@ public class MainActivity extends AppCompatActivity {
             longitude = location.getLongitude();
             latitude = location.getLatitude();
         }
+        txtLongitude.setText("Latitude: " +  String.valueOf(longitude));
         txtLatitude.setText("Logitude: " + String.valueOf(latitude));
-        txtLongitude.setText("Latitude: " + String.valueOf(longitude));
+
+
     }
     public void mostrarMapa(View view){
         double latitude = -23.322484, longitude = -46.732528;
