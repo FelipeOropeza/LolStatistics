@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
             longitude = location.getLongitude();
             latitude = location.getLatitude();
         }
-        txtLatitude.setText("Logitude: " + longitude);
+        txtLongitude.setText("Longitude: " + longitude);
         txtLatitude.setText("Latitude: " + latitude);
 
         giroscopio = new Giroscopio(this);
@@ -133,30 +133,5 @@ public class MainActivity extends AppCompatActivity {
         Intent it = new Intent(Intent.ACTION_VIEW, uri);
         startActivity(it);
     }
-    public void mostrarLocal(View view){
-        if(ActivityCompat.checkSelfPermission(
-                this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
-                &&
-                ActivityCompat.checkSelfPermission(
-                        this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED
-        ){
-            ActivityCompat.requestPermissions(this, new String[] {Manifest.permission.ACCESS_FINE_LOCATION}, 1);
-            ActivityCompat.requestPermissions(this, new String[] {Manifest.permission.ACCESS_COARSE_LOCATION}, 1);
-            ActivityCompat.requestPermissions(this, new String[] {Manifest.permission.ACCESS_NETWORK_STATE}, 1);
-
-        }
-
-        LocationManager locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
-        LocationListener locationListener = new Localizacao();
-        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, locationListener);
-        Log.v("geo", String.valueOf(Localizacao.latitude));
-    }
-    public void mostrarMapa(View view){
-        double latitude = -23.322484, longitude = -46.732528;
-        Uri location = Uri.parse("geo:" + String.valueOf(latitude) + "," + String.valueOf(longitude));
-        Intent mapIntent = new Intent(Intent.ACTION_VIEW, location);
-        startActivity(mapIntent);
-    }
-
 
 }
