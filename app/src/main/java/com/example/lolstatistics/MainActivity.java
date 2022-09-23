@@ -16,6 +16,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.content.Intent;
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -31,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onRotation(float rx, float ry, float rz) {
                 if(rz > 4.0f){
-                    Uri location = Uri.parse("geo:34.03263537836872, -118.45748108658526");
+                    Uri location = Uri.parse("geo:-23.51932141813161, -46.669311958238474");
                     Intent mapIntent = new Intent(Intent.ACTION_VIEW, location);
                     if(ActivityCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
                         ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.ACCESS_COARSE_LOCATION}, 1);
@@ -74,5 +76,17 @@ public class MainActivity extends AppCompatActivity {
     public void AbrirGuiaAlistar(View view){
         Intent intent = new Intent(this, ActivityAlistar.class);
         startActivity(intent);
+    }
+    public void AbrirSite(View view)
+    {
+        Uri uri = Uri.parse("https://www.leagueoflegends.com/pt-br/");
+        Intent it = new Intent(Intent.ACTION_VIEW,uri);
+        startActivity(Intent.createChooser(it, getString(R.string.chNavegador)));
+    }
+    public void AbrirYouTube(View view)
+    {
+        Uri uri = Uri.parse("https://www.youtube.com/c/RiotGamesBrasil");
+        Intent it = new Intent(Intent.ACTION_VIEW,uri);
+        startActivity(it);
     }
 }

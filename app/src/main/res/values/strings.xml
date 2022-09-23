@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">LoLStatistics</string>
     <string name="txtTitulo">LoLStatistics</string>
+    <string name="txtSite">Site Download</string>
+    <string name="txtCanal">Canal</string>
+    <string name="chNavegador">Escolha</string>
+
     <string name="txtRota">Rotas:</string>
 
     <string name="txtBuildsRecomendadas">Builds Recomendadas</string>
