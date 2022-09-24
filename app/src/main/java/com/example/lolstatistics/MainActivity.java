@@ -9,31 +9,16 @@ import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.pm.PackageManager;
-import android.graphics.Color;
-import android.hardware.Sensor;
-import android.hardware.SensorEventListener;
-import android.hardware.SensorManager;
-import android.location.Address;
-import android.location.GnssAntennaInfo;
 import android.location.Location;
-import android.location.LocationListener;
 import android.location.LocationManager;
 import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.content.Intent;
 import android.widget.TextView;
 
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
-import java.text.BreakIterator;
-
 
 public class MainActivity extends AppCompatActivity {
-
-    private TextView txtLatitude;
-    private TextView txtLongitude;
     private Giroscopio giroscopio;
     private Location location;
     private LocationManager locationManager;
@@ -44,10 +29,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        txtLatitude = (TextView) findViewById(R.id.txtLatitude);
-        txtLongitude = (TextView) findViewById(R.id.txtLongitude);
-
 
         giroscopio = new Giroscopio(this);
         giroscopio.setListener(new Giroscopio.Listener() {
@@ -116,33 +97,8 @@ public class MainActivity extends AppCompatActivity {
         Intent it = new Intent(Intent.ACTION_VIEW, uri);
         startActivity(it);
     }
-    public void mostrarLocal(View view){
-        double longitude = 0;
-        double latitude = 0;
-
-        if(ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 1);
-        }else{
-            locationManager = (LocationManager)
-                    getSystemService(Context.LOCATION_SERVICE);
-            location =
-                    locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
-        }
-        if (location != null){
-            longitude = location.getLongitude();
-            latitude = location.getLatitude();
-        }
-        txtLongitude.setText("Latitude: " +  String.valueOf(longitude));
-        txtLatitude.setText("Logitude: " + String.valueOf(latitude));
-
-
+    public void AbrirGuiaLoca(View view){
+        Intent intent = new Intent(this,Localiza.class);
+        startActivity(intent);
     }
-    public void mostrarmapa(View view){
-        double latitude = -23.322484, longitude = -46.732528;
-        Uri location = Uri.parse("geo:" + String.valueOf(latitude) + "," + String.valueOf(longitude));
-        Intent mapIntent = new Intent(Intent.ACTION_VIEW, location);
-        startActivity(mapIntent);
-    }
-
-
 }
