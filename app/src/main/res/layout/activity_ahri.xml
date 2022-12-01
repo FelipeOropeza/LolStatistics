@@ -6,6 +6,20 @@
     android:layout_height="match_parent"
     tools:context=".ActivityAhri">
 
+    <ImageView
+        android:id="@+id/imageView66"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:baselineAlignBottom="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.96"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.423"
+        app:srcCompat="@drawable/mejai"
+        tools:ignore="ImageContrastCheck,ImageContrastCheck" />
+
     <View
         android:id="@+id/divider11"
         android:layout_width="409dp"
@@ -298,13 +312,13 @@
         android:layout_height="55dp"
         android:baselineAlignBottom="true"
         android:foregroundTint="#005F2E8F"
-        android:tint="#009F3131"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.957"
+        app:layout_constraintHorizontal_bias="0.955"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.423"
-        app:srcCompat="@drawable/zhonyas" />
+        app:srcCompat="@drawable/zhonyas"
+        app:tint="#009F3131" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
