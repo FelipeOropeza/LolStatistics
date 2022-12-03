@@ -101,4 +101,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this,Localiza.class);
         startActivity(intent);
     }
+
+    public void AbrirCadastro(View view){
+        Intent intent = new Intent(this,RegistroUser.class);
+        startActivity(intent);
+    }
 }
