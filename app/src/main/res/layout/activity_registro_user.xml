@@ -7,7 +7,7 @@
     tools:context=".RegistroUser">
 
     <TextView
-        android:id="@+id/txtresult"
+        android:id="@+id/txtresult2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="#605454"
@@ -19,6 +19,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.854" />
+
+    <TextView
+        android:id="@+id/txtDados2"
+        android:layout_width="288dp"
+        android:layout_height="38dp"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.743" />
 
     <TextView
         android:id="@+id/txtCad"
@@ -99,18 +112,5 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.575"
         app:rippleColor="#FFFFFF" />
-
-    <TextView
-        android:id="@+id/txtDados"
-        android:layout_width="288dp"
-        android:layout_height="38dp"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.743" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

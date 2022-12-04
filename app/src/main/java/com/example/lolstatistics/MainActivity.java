@@ -106,4 +106,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this,RegistroUser.class);
         startActivity(intent);
     }
+
+    public void AbrirFeed(View view){
+        Intent intent = new Intent(this,FeedBack.class);
+        startActivity(intent);
+    }
 }

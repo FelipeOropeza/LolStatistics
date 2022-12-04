@@ -10,6 +10,10 @@
     <string name="txtCadNome">Nome</string>
     <string name="txtCadEmail">Email</string>
     <string name="txtCadSenha">Senha</string>
+    <string name="txtFeedMens">Mensagem</string>
+    <string name="txtfeed">Avalie-nos</string>
+    <string name="txtButtonFeed">Enviar</string>
+    <string name="txtFeed">FeedBack</string>
 
 
     <string name="txtRota">Rotas:</string>

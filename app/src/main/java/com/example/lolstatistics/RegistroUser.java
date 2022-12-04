@@ -30,8 +30,8 @@ public class RegistroUser extends AppCompatActivity {
         editTextEmail = findViewById(R.id.editTextEmail);
         editTextSenha = findViewById(R.id.editTextSenha);
         btnCad = findViewById(R.id.btnCad);
-        txtresult = findViewById(R.id.txtresult);
-        txtDados = findViewById(R.id.txtDados);
+        txtresult = findViewById(R.id.txtresult2);
+        txtDados = findViewById(R.id.txtDados2);
 
         btnCad.setOnClickListener(new View.OnClickListener() {
             @Override
