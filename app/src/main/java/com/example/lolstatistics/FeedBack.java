@@ -5,6 +5,7 @@ import androidx.core.app.ActivityCompat;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Environment;
 import android.view.View;
@@ -38,7 +39,7 @@ public class FeedBack extends AppCompatActivity {
         File folder = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);
 
         // Storing the data in file with name as geeksData.txt
-        File file = new File(folder, "FeedBack.txt");
+        File file = new File(folder, "Feed.txt");
         writeTextData(file, editTextData);
         editText.setText("");
     }
@@ -60,5 +61,10 @@ public class FeedBack extends AppCompatActivity {
                 }
             }
         }
+    }
+
+    public void VoltaGuia(View view){
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 }

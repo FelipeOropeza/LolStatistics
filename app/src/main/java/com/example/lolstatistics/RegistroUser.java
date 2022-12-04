@@ -6,6 +6,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -74,5 +75,10 @@ public class RegistroUser extends AppCompatActivity {
         else{
             txtresult.setText("Olá, usuário não definido");
         }
+    }
+
+    public void VoltaGuia(View view){
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 }
